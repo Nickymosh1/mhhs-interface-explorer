@@ -234,32 +234,31 @@
 </head>
 <body class="gradient-bg text-[var(--dark-purple)] min-h-screen">
 
-    <div class="container mx-auto p-4 md:p-8">
-        <header class="text-center mb-12">
+    <div class="container mx-auto p-4 md:p-6">
+        <header class="text-center mb-10">
             <div class="float-animation inline-block">
-                <h1 class="text-5xl md:text-7xl font-bold hero-text mb-4">MHHS Interface Explorer</h1>
+                <h1 class="text-4xl md:text-6xl font-bold hero-text mb-3">MHHS Interface Explorer</h1>
             </div>
-            <p class="text-xl text-[var(--purple)] opacity-80 max-w-2xl mx-auto leading-relaxed">
+            <p class="text-lg text-[var(--purple)] opacity-80 max-w-2xl mx-auto leading-relaxed">
                 Discover and explore interfaces based on the Supplier's role in the MHHS ecosystem.
             </p>
         </header>
 
-        <div class="flex flex-col lg:flex-row gap-8">
+        <div class="flex flex-col lg:flex-row gap-6">
 
-            <aside class="lg:w-1/3 xl:w-1/4 glass p-8 rounded-3xl shadow-2xl backdrop-blur-sm">
-                <h2 id="filter-heading" class="text-2xl font-bold mb-6 text-[var(--eon-red)]">Find an Interface</h2>
+            <aside class="lg:w-1/3 xl:w-1/4 glass p-6 rounded-3xl shadow-2xl backdrop-blur-sm">
+                <h2 id="filter-heading" class="text-xl font-bold mb-5 text-[var(--eon-red)]">Find an Interface</h2>
                 
-                <div class="mb-6">
-                    <input type="search" id="searchInput" placeholder="Search by ID, name, or description..." 
-                           class="search-input w-full px-6 py-4 border-0 rounded-2xl focus:ring-2 focus:ring-[var(--eon-red)] transition placeholder:text-[var(--purple)] placeholder:opacity-60 text-lg">
+                <div class="mb-5">
+                    <input type="search" id="searchInput" placeholder="Search by ID, name, or description..."
+                           class="search-input w-full px-4 py-3 border-0 rounded-xl focus:ring-2 focus:ring-[var(--eon-red)] transition placeholder:text-[var(--purple)] placeholder:opacity-60 text-base">
                 </div>
 
-                <div role="group" aria-labelledby="filter-heading" class="flex flex-wrap gap-3 mb-6">
-                    <button class="filter-btn border-0 text-[var(--purple)] bg-[var(--birch)] px-4 py-2 rounded-xl text-sm font-medium shadow-md" data-filter="all" aria-pressed="true">All Interfaces</button>
-                    <button class="filter-btn border-0 text-[var(--purple)] px-4 py-2 rounded-xl text-sm font-medium shadow-md" data-filter="supplier_send" aria-pressed="false" style="background: linear-gradient(135deg, #9254FF20, #9254FF10);">Supplier Send</button>
-                    <button class="filter-btn border-0 text-[var(--dark-purple)] px-4 py-2 rounded-xl text-sm font-medium shadow-md" data-filter="supplier_receive" aria-pressed="false" style="background: linear-gradient(135deg, #FFDE0030, #FFDE0020);">Supplier Receive</button>
-                    <button class="filter-btn border-0 text-[var(--dark-purple)] px-4 py-2 rounded-xl text-sm font-medium shadow-md" data-filter="supplier_both" aria-pressed="false" style="background: linear-gradient(135deg, #1AE57030, #1AE57020);">Supplier Both</button>
-                    <button class="filter-btn border-0 text-[var(--purple)] px-4 py-2 rounded-xl text-sm font-medium shadow-md" data-filter="none" aria-pressed="false" style="background: linear-gradient(135deg, #e5e7eb, #f3f4f6);">Not Involved</button>
+                <div role="group" aria-labelledby="filter-heading" class="flex flex-wrap gap-2 mb-5">
+                    <button class="filter-btn border-0 text-[var(--purple)] bg-[var(--birch)] px-3 py-1.5 rounded-lg text-xs font-medium shadow-md" data-filter="all" aria-pressed="true">All Interfaces</button>
+                    <button class="filter-btn border-0 text-[var(--purple)] px-3 py-1.5 rounded-lg text-xs font-medium shadow-md" data-filter="supplier_send" aria-pressed="false" style="background: linear-gradient(135deg, #9254FF20, #9254FF10);">Supplier Send</button>
+                    <button class="filter-btn border-0 text-[var(--dark-purple)] px-3 py-1.5 rounded-lg text-xs font-medium shadow-md" data-filter="supplier_receive" aria-pressed="false" style="background: linear-gradient(135deg, #FFDE0030, #FFDE0020);">Supplier Receive</button>
+                    <button class="filter-btn border-0 text-[var(--purple)] px-3 py-1.5 rounded-lg text-xs font-medium shadow-md" data-filter="none" aria-pressed="false" style="background: linear-gradient(135deg, #e5e7eb, #f3f4f6);">Not Involved</button>
                 </div>
 
                 <div id="interfaceList" class="overflow-y-auto h-[60vh] pr-2" role="region" aria-live="polite" aria-atomic="true">
@@ -267,15 +266,15 @@
                 </div>
             </aside>
 
-            <main id="detailsPanel" class="lg:w-2/3 xl:w-3/4 card-gradient p-8 md:p-10 rounded-3xl shadow-2xl" role="main" aria-live="polite">
-                <div id="welcomeMessage" class="flex flex-col items-center justify-center h-full text-center py-20">
-                    <div class="welcome-icon mb-8">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-32 h-32" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1" aria-hidden="true">
+            <main id="detailsPanel" class="lg:w-2/3 xl:w-3/4 card-gradient p-6 md:p-8 rounded-3xl shadow-2xl" role="main" aria-live="polite">
+                <div id="welcomeMessage" class="flex flex-col items-center justify-center h-full text-center py-16">
+                    <div class="welcome-icon mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-24 h-24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M12 18h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2zM9 9h6v6H9V9z" />
                         </svg>
                     </div>
-                    <h2 class="text-4xl font-bold mb-4 hero-text">Select an Interface</h2>
-                    <p class="text-xl text-[var(--purple)] opacity-80 max-w-md leading-relaxed">Click on any interface from the list to explore its details and understand its role in the MHHS ecosystem.</p>
+                    <h2 class="text-3xl font-bold mb-3 hero-text">Select an Interface</h2>
+                    <p class="text-lg text-[var(--purple)] opacity-80 max-w-md leading-relaxed">Click on any interface from the list to explore its details.</p>
                 </div>
                 <div id="detailsContent" class="hidden">
                     <!-- JS populates this area -->
@@ -290,35 +289,35 @@
             {"id":"IF-001/PUB-001","name":"Notification of Change of Supplier","description":"Notification of Change of Supplier","sender":"Registration Service","receiver":"Incoming Supplier (SUP), Marketwide Data Service (MDS), LDSO","context":"Following a successful Change of Supplier, the CSS will notify this to the Registration Service. The Registration Service will then notify parties that a successful Change of Supplier has taken place. This provides the Gaining Supplier with key information about the MPAN as it currently exists in the Registration Service.","supplier_type":"supplier_receive"},
             {"id":"IF-002/PUB-002","name":"Notification to New Supplier of Site Information","description":"Notification to New Supplier of Site Information","sender":"Registration Service","receiver":"Incoming Supplier (SUP)","context":"Following notification of a potential/pending Switch from CSS, the Registration Service will issue this message to the incoming Supplier to advise the incoming Supplier of Site Information so that the Supplier can determine the correct Service Providers to appoint (this is the equivilent to the D0217/D0260)","supplier_type":"supplier_receive"},
             {"id":"IF-003/PUB-003","name":"Notification of Reverse Migration and Deappointment","description":"Notification of Reverse Migration and Deappointment","sender":"Registration Service","receiver":"Data Service (ADS, SDS, UMSDS) / Metering Service (MSA, MSS, UMSO) / LDSO / MDS / Supplier","context":"This provides Notification of a Reverse Migration to MDS/LDSO. It also advises MHHS Service Providers that they have been De-Appointed (as a result of a Reverse Migration) and where appropriate details of the incoming 'old regime' agents i.e. MOP / DC.","supplier_type":"supplier_receive"},
-            {"id":"IF-004","name":"Comms Hub Information (Optional)","description":"Optional interface to allow passing of Comms Hub information","sender":"Metering Service Smart (MSS) / Supplier (SUP)","receiver":"Supplier (SUP) / Metering Service Smart (MSS)","context":"Use of this interface is optional. It is provided for use by Smart Metering Services & Suppliers that bilaterally agree to share Comms Hub information between themselves.","supplier_type":"supplier_both"},
+            {"id":"IF-004/PUB-004","name":"Comms Hub Information (Optional)","description":"Optional interface to allow passing of Comms Hub information","sender":"Metering Service Smart (MSS) / Supplier (SUP)","receiver":"Supplier (SUP) / Metering Service Smart (MSS)","context":"Use of this interface is optional. It is provided for use by Smart Metering Services & Suppliers that bilaterally agree to share Comms Hub information between themselves.","supplier_type":"supplier_both"},
             {"id":"IF-005/PUB-005","name":"Metering Service MTD Updates to Registration","description":"To notify the Registration Service of Metering related Data Item changes, for example, New install, Removal, MEX, change to existing Meter Details","sender":"Metering Service Smart (MSS) & Metering Service Advanced (MSA)","receiver":"Registration Service (REGS)","context":"This interface is used by Metering Services to notify any changes required to Metering Technical Information, to the Registration Service For example, Meter Installations, Removals and Exchanges. The interface also allows for corrections to the currently installed meter & the historical record of installed metering assets.","supplier_type":"none"},
             {"id":"IF-006/PUB-006","name":"Notification of Metering Service MTD Update to Registration","description":"Outcome of Metering Service Request to Update Registration after Install, Removal, MEX or Updates to Existing Meter","sender":"Registration Service (REGS)","receiver":"Metering Service (MSS, MSA), Data Service (SDS, ADS) , Supplier (SUP), LDSO, EES & MDR","context":"This interface is used by Registration Service to notify the outcome of changes of Metering Technical Information to the Metering Service, and if successfull other participants. For example, Meter Installations, Removals and Exchanges. This response also includes confirmation of other existing meter(s) installed at the MPAN, which were not impacted by the Metering Event.","supplier_type":"supplier_receive"},
-            {"id":"IF-007","name":"Change of Energisation Status","description":"This interface is used by the Metering Service to notify the Registration Service of changes to the energisation status or to inform the Supplier where a request to change the energisation status has been rejected.","sender":"Metering Service Smart (MSS) & Metering Service Advanced (MSA), Unmetered Supplies Operator (UMSO)","receiver":"Registration Service (REGS), Supplier (SUP) (Failed to action only)","context":"This interface is used by the Metering Service to notify the Registration Service of changes to the energisation status or to inform the Supplier where a request to change the energisation status has been rejected.","supplier_type":"supplier_receive"},
+            {"id":"IF-007/PUB-007","name":"Change of Energisation Status","description":"This interface is used by the Metering Service to notify the Registration Service of changes to the energisation status or to inform the Supplier where a request to change the energisation status has been rejected.","sender":"Metering Service Smart (MSS) & Metering Service Advanced (MSA), Unmetered Supplies Operator (UMSO)","receiver":"Registration Service (REGS), Supplier (SUP) (Failed to action only)","context":"This interface is used by the Metering Service to notify the Registration Service of changes to the energisation status or to inform the Supplier where a request to change the energisation status has been rejected.","supplier_type":"supplier_receive"},
             {"id":"IF-008/PUB-008","name":"Notification of Change of Energisation Status Request","description":"This interface is used by Registration Service to notify the outcome of Change of Energisation Status Requests.","sender":"Registration Service (REGS)","receiver":"Metering Service (MSS, MSA, UMSO), Data Service (SDS, ADS, UMSDS), Supplier (SUP), LDSO, Market-wide Data Service (MDS), EES & MDR","context":"This interface is used by Registration Service to notify the outcome of Change of Energisation Status Requests.","supplier_type":"supplier_receive"},
             {"id":"IF-009/PUB-009","name":"Notification of MPAN Disconnection/Termination","description":"This interface is used by Registration Service to notify participants that an MPAN has been Disconnected by LDSO and/or terminated by CSS. It is no longer possible to register an MPAN following this point.","sender":"Registration Service (REGS)","receiver":"Supplier (SUP), LDSO, Market-wide Data Service (MDS), EES","context":"This interface is used by Registration Service to notify participants that an MPAN has been Disconnected by LDSO and/or terminated by CSS. It is no longer possible to register an MPAN following this point.","supplier_type":"supplier_receive"},
             {"id":"IF-013/PUB-013","name":"Notification of Defaulted Consumption","description":"This interface will be issued by ECS/MDS to advise Supplier, Data Service and if required the LDSO of the volume(s) for each Settlement Period which have been Defaulted","sender":"Market-wide Data Service (MDS)","receiver":"Data Services - Smart Data Service (SDS) / Advanced Data Service (ADS) / UMSDS / Supplier (SUP) / LDSO","context":"This interface will be issued by ECS/MDS to advise Supplier, Data Service and if required the LDSO of the volume(s) for each Settlement Period which have been Defaulted","supplier_type":"supplier_receive"},
             {"id":"IF-014/PUB-014","name":"Rejection of Consumption Data/Warning","description":"Rejection of Data Service provided Actual or Estimated UTC Settlement Period Consumption data/ Warning of Consumption on a De-energised MPAN","sender":"Marketwide Data Service (MDS)","receiver":"Data Services (SDS, ADS, UMSDS), Supplier (SUP)","context":"Rejection of Data Service provided Actual or Estimated UTC Settlement Period Consumption data/ Warning of Consumption on a De-energised MPAN","supplier_type":"supplier_receive"},
-            {"id":"IF-015","name":"Request for Consumption Replay","description":"This interface is used by Advanced Data Services to request a Replay of historic Consumption submissions for a newly acquired MPAN, from the DIP.","sender":"Advanced Data Service (ADS)","receiver":"DIP Replay Service","context":"This interface is used by Advanced Data Services to request a Replay of historic Consumption submissions for a newly acquired MPAN, from the DIP.","supplier_type":"none"},
-            {"id":"IF-016","name":"Consumption Replay","description":"This interface is used by the DIP in order to Replay historic Consumption submissions for a newly acquired MPAN, back to the Advanced Data Service.","sender":"DIP","receiver":"Advanced Data Service (ADS)","context":"This interface is used by the DIP in order to Replay historic Consumption submissions for a newly acquired MPAN, back to the Advanced Data Service.","supplier_type":"none"},
+            {"id":"IF-015/PUB-015","name":"Request for Consumption Replay","description":"This interface is used by Advanced Data Services to request a Replay of historic Consumption submissions for a newly acquired MPAN, from the DIP.","sender":"Advanced Data Service (ADS)","receiver":"DIP Replay Service","context":"This interface is used by Advanced Data Services to request a Replay of historic Consumption submissions for a newly acquired MPAN, from the DIP.","supplier_type":"none"},
+            {"id":"IF-016/PUB-016","name":"Consumption Replay","description":"This interface is used by the DIP in order to Replay historic Consumption submissions for a newly acquired MPAN, back to the Advanced Data Service.","sender":"DIP","receiver":"Advanced Data Service (ADS)","context":"This interface is used by the DIP in order to Replay historic Consumption submissions for a newly acquired MPAN, back to the Advanced Data Service.","supplier_type":"none"},
             {"id":"IF-018/PUB-018","name":"Notification of LDSO Maintained Data Changes","description":"This interface is to notify participants of changes to Registration Service Data Items, principally those maintained by the LDSO or notified to Registration Service directly by CSS","sender":"Registration Service (REGS)","receiver":"Supplier (SUP), Data Service (ADS, SDS, UMSDS), Metering Service (MSA, MSS, UMSO) , Market-wide Data Service (MDS), EES & LDSO","context":"This interface is to notify participants of changes to Registration Service Data Items, principally those maintained by the LDSO or notified to Registration Service directly by CSS","supplier_type":"supplier_receive"},
-            {"id":"IF-019","name":"Request to Create/Change MPAN Relationship","description":"Interface to allow Supplier to request/specify the Creation, Addition or Removal of MPAN(s) from a MPAN Relationship - either an Import/Export or Related MPAN grouping.","sender":"Supplier (SUP)","receiver":"Registration Service (REGS)/LDSO","context":"Interface to allow Supplier to request/specify the Creation, Addition or Removal of MPAN(s) from a MPAN Relationship - either an Import/Export or Related MPAN grouping.","supplier_type":"supplier_send"},
+            {"id":"IF-019/PUB-019","name":"Request to Create/Change MPAN Relationship","description":"Interface to allow Supplier to request/specify the Creation, Addition or Removal of MPAN(s) from a MPAN Relationship - either an Import/Export or Related MPAN grouping.","sender":"Supplier (SUP)","receiver":"Registration Service (REGS)/LDSO","context":"Interface to allow Supplier to request/specify the Creation, Addition or Removal of MPAN(s) from a MPAN Relationship - either an Import/Export or Related MPAN grouping.","supplier_type":"supplier_send"},
             {"id":"IF-020/PUB-020","name":"MPAN Relationship Response","description":"Interface providing the Registration Service Response to an MPAN Relationship request to create/change.","sender":"Registration Service (REGS)/ LDSO","receiver":"Supplier (SUP), Data Service (ADS, SDS), Metering Service (MSS, MSA), LDSO & EES","context":"Interface providing the Registration Service Response to an MPAN Relationship request to create/change.","supplier_type":"supplier_receive"},
             {"id":"IF-021/PUB-021","name":"Provide Settlement Period Consumption","description":"Data Service will provide Actual or Estimated UTC Settlement Period Consumption data (Active and where appropriate Reactive), for each MPAN, for each day that they are appointed.","sender":"Data Services - Smart Data Service (SDS) / Advanced Data Service (ADS) / UMSDS","receiver":"Load Shaping Service (LSS) / Market-wide Data Service (MDS) / Distributor (LDSO) / Supplier (SUP)","context":"Data Service will provide Actual or Estimated UTC Settlement Period Consumption data (Active and where appropriate Reactive), for each MPAN, for each day that they are appointed.","supplier_type":"supplier_receive"},
             {"id":"IF-022/PUB-022","name":"Provide Load Shape Period Data","description":"Central settlement will calculate Settlement Period Load Shapes on a daily basis. These new load shapes are created for each UTC Settlement Period of a UTC Settlement Date and must be delivered to the Data Services, within agreed timescales, so as to allow for Data Service Validation & Estimation processes to operate in an accurate & timely fashion.","sender":"Load Shaping Service (LSS)","receiver":"Supplier (SUP), Data Services (ADS, SDS, UMSDS), Public (via separate file-sharing mechanism)","context":"Central settlement will calculate Settlement Period Load Shapes on a daily basis. These new load shapes are created for each UTC Settlement Period of a UTC Settlement Date and must be delivered to the Data Services, within agreed timescales, so as to allow for Data Service Validation & Estimation processes to operate in an accurate & timely fashion.","supplier_type":"supplier_receive"},
             {"id":"IF-023/PUB-023","name":"Provide Load Shape Totals Data","description":"Central settlement will calculate Settlement Period Load Shapes on a daily basis. These new load shapes are created for each UTC Settlement Period of a UTC Settlement Date and must be delivered to the Data Services, within agreed timescales, so as to allow for Data Service Validation & Estimation processes to operate in an accurate & timely fashion.","sender":"Load Shaping Service (LSS)","receiver":"Supplier (SUP), Data Services (ADS, SDS, UMSDS), Public (via separate file-sharing mechanism)","context":"Central settlement will calculate Settlement Period Load Shapes on a daily basis. These new load shapes are created for each UTC Settlement Period of a UTC Settlement Date and must be delivered to the Data Services, within agreed timescales, so as to allow for Data Service Validation & Estimation processes to operate in an accurate & timely fashion.","supplier_type":"supplier_receive"},
             {"id":"IF-024/PUB-024","name":"Notification of Data Service Influencing Circumstances","description":"Notification to the Data Service of circumstances which may impact or influence Data Service treatment of a site","sender":"Supplier (SUP)","receiver":"Data Service (ADS, SDS), MDR","context":"Notification to the Data Service of circumstances which may impact or influence Data Service treatment of a site","supplier_type":"supplier_send"},
-            {"id":"IF-025","name":"Request to Update Supplier Maintained Data","description":"This interface is to allow Supplier to maintain Registration Service Data Items for which it has ownership/responsibility","sender":"Supplier (SUP)","receiver":"Registration Service (REGS)","context":"This interface is to allow Supplier to maintain Registration Service Data Items for which it has ownership/responsibility","supplier_type":"supplier_send"},
+            {"id":"IF-025/PUB-025","name":"Request to Update Supplier Maintained Data","description":"This interface is to allow Supplier to maintain Registration Service Data Items for which it has ownership/responsibility","sender":"Supplier (SUP)","receiver":"Registration Service (REGS)","context":"This interface is to allow Supplier to maintain Registration Service Data Items for which it has ownership/responsibility","supplier_type":"supplier_send"},
             {"id":"IF-026/PUB-026","name":"Notification of Supplier Maintained Data Changes","description":"This interface is to notify participants of changes to Registration Service Data Items, principally those maintained by the Supplier","sender":"Registration Service (REGS)","receiver":"Supplier (SUP)/ Data Service (ADS, SDS, UMSDS)/ Central Settlements (LSS)/ LDSO / Metering Service (MSA, MSS, UMSO)/ EES/ MDR","context":"This interface is to notify participants of changes to Registration Service Data Items, principally those maintained by the Supplier","supplier_type":"supplier_receive"},
-            {"id":"IF-027","name":"Request to Calculate & Submit Consumption Amendment","description":"Request by Supplier for the Data Service to Calculate and Submit a Consumption Amendment","sender":"Supplier (SUP)","receiver":"Advanced Data Service (ADS) and Smart Data Service (SDS)","context":"Request by Supplier for the Data Service to Calculate and Submit a Consumption Amendment","supplier_type":"supplier_send"},
+            {"id":"IF-027/PUB-027","name":"Request to Calculate & Submit Consumption Amendment","description":"Request by Supplier for the Data Service to Calculate and Submit a Consumption Amendment","sender":"Supplier (SUP)","receiver":"Advanced Data Service (ADS) and Smart Data Service (SDS)","context":"Request by Supplier for the Data Service to Calculate and Submit a Consumption Amendment","supplier_type":"supplier_send"},
             {"id":"IF-028/PUB-028","name":"Response to Consumption Amendment Request","description":"Response from the Data Service to a Supplier Request Calculate and Submit a Consumption Amendment","sender":"Data Service (ADS, SDS, UMSDS)","receiver":"Supplier (SUP)","context":"Response from the Data Service to a Supplier Request Calculate and Submit a Consumption Amendment","supplier_type":"supplier_receive"},
-            {"id":"IF-031","name":"Request to Appoint Service Provider","description":"Initial request from Supplier to Registration Service to Appoint a Service Provider, either Metering Service or Data Service","sender":"Supplier (SUP)","receiver":"Registration Service (REGS)","context":"Initial request from Supplier to Registration Service to Appoint a Service Provider, either Metering Service or Data Service","supplier_type":"supplier_send"},
+            {"id":"IF-031/PUB-031","name":"Request to Appoint Service Provider","description":"Initial request from Supplier to Registration Service to Appoint a Service Provider, either Metering Service or Data Service","sender":"Supplier (SUP)","receiver":"Registration Service (REGS)","context":"Initial request from Supplier to Registration Service to Appoint a Service Provider, either Metering Service or Data Service","supplier_type":"supplier_send"},
             {"id":"IF-032/PUB-032","name":"Response to Initial Service Provider Appointment Request","description":"Registration Service Response to Suppliers initial request to Appoint a Service Provider, either Metering Service or Data Service","sender":"Registration Service (REGS)","receiver":"Supplier (SUP)","context":"Registration Service Response to Suppliers initial request to Appoint a Service Provider, either Metering Service or Data Service","supplier_type":"supplier_receive"},
             {"id":"IF-033/PUB-033","name":"Request to Consider Service Provider Appointment","description":"Registration Service request to a Service Provider to consider Appointment to an MPAN as either a Metering Service or Data Service","sender":"Registration Service (REGS)","receiver":"Data Service (ADS, SDS, UMSDS)/ Metering Service (MSA, MSS, UMSO)","context":"Registration Service request to a Service Provider to consider Appointment to an MPAN as either a Metering Service or Data Service","supplier_type":"none"},
-            {"id":"IF-034","name":"Service Provider Appointment Response","description":"Service Providers Response to request for Appointment or Change of Appointment for an MPAN","sender":"Data Service (ADS, SDS, UMSDS)/ Metering Service (MSA, MSS, UMSO)","receiver":"Registration Service (REGS)","context":"Service Providers Response to request for Appointment or Change of Appointment for an MPAN","supplier_type":"none"},
+            {"id":"IF-034/PUB-034","name":"Service Provider Appointment Response","description":"Service Providers Response to request for Appointment or Change of Appointment for an MPAN","sender":"Data Service (ADS, SDS, UMSDS)/ Metering Service (MSA, MSS, UMSO)","receiver":"Registration Service (REGS)","context":"Service Providers Response to request for Appointment or Change of Appointment for an MPAN","supplier_type":"none"},
             {"id":"IF-035/PUB-035","name":"Notification of Service Provider Appointment Status","description":"Registration Service Notification on Appointment Status. This could be that Appointment has been Accepted or Rejected by Service Provider; has become Lapsed (i.e. could not be successfully matched with a SecuredActive Switch). It is also used to advise the Incumbent Metering Service to issue MTDs to incoming Service Providers.","sender":"Registration Service (REGS)","receiver":"Supplier (SUP), Incumbent Metering Service, Data Service (ADS, SDS, UMSDS), Metering Service (MSA, MSS, UMSO)","context":"Registration Service Notification on Appointment Status. This could be that Appointment has been Accepted or Rejected by Service Provider; has become Lapsed (i.e. could not be successfully matched with a SecuredActive Switch). It is also used to advise the Incumbent Metering Service to issue MTDs to incoming Service Providers.","supplier_type":"supplier_receive"},
             {"id":"IF-036/PUB-036","name":"Confirmation of Service Provider Appointment","description":"Registration Service formal Confirmation of Appointment & provision of MPAN Supporting Data and MTDs","sender":"Registration Service (REGS)","receiver":"Supplier (SUP) / Data Service (ADS, SDS, UMSDS)/ Metering Service (MSA, MSS, UMSO) / LDSO / MDS / EES","context":"Registration Service formal Confirmation of Appointment & provision of MPAN Supporting Data and MTDs","supplier_type":"supplier_receive"},
             {"id":"IF-037/PUB-037","name":"Notification of Service Provider De-Appointment","description":"Notification to a Service Provider that they have been De-Appointed, and no longer have responsibility for the MPAN","sender":"Registration Service (REGS)","receiver":"Supplier (SUP) / Data Service (ADS, SDS, UMSDS)/ Metering Service (MSA, MSS, UMSO) / MDS / LDSO / EES","context":"Notification to a Service Provider that they have been De-Appointed, and no longer have responsibility for the MPAN","supplier_type":"supplier_receive"},
-            {"id":"IF-038","name":"Customer Direct Contract Request","description":"Request from Service Provider either to record, delete or amend a Customer Direct Contract with that Service Provider, for a given MPAN","sender":"Metering Service (MSA, MSS, UMSO)/Data Service (ADS, SDS, UMSDS)","receiver":"Registration Service (REGS)","context":"Request from Service Provider either to record, delete or amend a Customer Direct Contract with that Service Provider, for a given MPAN","supplier_type":"none"},
+            {"id":"IF-038/PUB-038","name":"Customer Direct Contract Request","description":"Request from Service Provider either to record, delete or amend a Customer Direct Contract with that Service Provider, for a given MPAN","sender":"Metering Service (MSA, MSS, UMSO)/Data Service (ADS, SDS, UMSDS)","receiver":"Registration Service (REGS)","context":"Request from Service Provider either to record, delete or amend a Customer Direct Contract with that Service Provider, for a given MPAN","supplier_type":"none"},
             {"id":"IF-039/PUB-039","name":"Customer Direct Contract Advisory Response","description":"Registration Service Response to Service Provider request to either to record, delete or amend a Customer Direct Contract with that Service Provider, for a given MPAN","sender":"Registration Service (REGS)","receiver":"Metering Service (MSA, MSS, UMSO)/Data Service (ADS, SDS, UMSDS) / Supplier (SUP)/ EES","context":"Registration Service Response to Service Provider request to either to record, delete or amend a Customer Direct Contract with that Service Provider, for a given MPAN","supplier_type":"supplier_receive"},
             {"id":"IF-040/PUB-040","name":"Notification of Annual Consumption","description":"On a monthly basis the Market-wide Data Service will calculate an Annual Consumption for each MPAN. This interface is to notify participants of the value, quality and calculation date of that consumption.","sender":"Market-wide Data Service (MDS)","receiver":"Suppliers (SUP), Data Service (SDS, ADS, UMSDS), LDSO, Registration Service (REGS) & EES","context":"On a monthly basis the Market-wide Data Service will calculate an Annual Consumption for each MPAN. This interface is to notify participants of the value, quality and calculation date of that consumption.","supplier_type":"supplier_receive"},
             {"id":"IF-041/PUB-041","name":"Smart / Advanced Readings","description":"New Interface to exchange Exchange, Smart and Smart COR Meter Readings between MHHS Parties","sender":"MS, DS, Supplier","receiver":"Advanced Data Service (ADS) and Smart Data Service (SDS) / Supplier (SUP)/ LDSO","context":"This interface is to allow Cumulative Reads and/or, Smart/Advanced Register Redings, to be exchanged in a number of business scenarios. Following MHHS implementation, in most cases consumption values will be available directly from the meter. However, there may be occasions when consumption may not be available, therefore a Cumulative Reading will need to be captured/shared as a 'fall back' measure","supplier_type":"supplier_both"},
@@ -351,7 +350,12 @@
                 
                 // Filter interfaces based on current filter and search term
                 filteredInterfaces = interfaceData.filter(item => {
-                    const matchesFilter = (currentFilter === 'all' || item.supplier_type === currentFilter);
+                    const matchesFilter =
+                        currentFilter === 'all' ||
+                        item.supplier_type === currentFilter ||
+                        (currentFilter === 'supplier_send' && item.supplier_type === 'supplier_both') ||
+                        (currentFilter === 'supplier_receive' && item.supplier_type === 'supplier_both');
+                    
                     const matchesSearch = !lowerCaseSearchTerm ||
                                           item.id.toLowerCase().includes(lowerCaseSearchTerm) ||
                                           item.name.toLowerCase().includes(lowerCaseSearchTerm) ||
@@ -362,12 +366,12 @@
                 interfaceList.innerHTML = '';
 
                 if (filteredInterfaces.length === 0) {
-                    interfaceList.innerHTML = `<div class="text-center text-[var(--purple)] opacity-80 p-6 bg-[var(--birch)] rounded-2xl">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 mx-auto mb-3 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    interfaceList.innerHTML = `<div class="text-center text-[var(--purple)] opacity-80 p-4 bg-[var(--birch)] rounded-2xl">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 mx-auto mb-2 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 12h6m-6-4h6m2 5.291A7.962 7.962 0 0112 15c-2.34 0-4.44-1.01-5.9-2.62l2.9-2.379a4 4 0 011.02.189M12 9a3 3 0 013 3m0 0a3 3 0 01-3 3m0-3h.01m9 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
-                        <p class="text-lg font-medium">No interfaces found</p>
-                        <p class="text-sm opacity-70">Try adjusting your search or filter</p>
+                        <p class="text-base font-medium">No interfaces found</p>
+                        <p class="text-xs opacity-70">Try adjusting your search or filter</p>
                     </div>`;
                     return;
                 }
@@ -381,13 +385,13 @@
                         none: 'border-l-4 border-gray-300'
                     };
                     const element = document.createElement('div');
-                    element.className = `interface-card p-6 mb-3 bg-[var(--white)] rounded-2xl cursor-pointer shadow-lg ${typeStyles[item.supplier_type]}`;
+                    element.className = `interface-card p-4 mb-2 bg-[var(--white)] rounded-xl cursor-pointer shadow-lg ${typeStyles[item.supplier_type]}`;
                     element.dataset.id = item.id;
                     element.setAttribute('role', 'button');
                     element.setAttribute('tabindex', '0');
                     element.innerHTML = `
-                        <p class="font-bold text-[var(--dark-purple)] pointer-events-none text-lg mb-2">${escapeHtml(item.id)}</p>
-                        <p class="text-[var(--purple)] opacity-90 pointer-events-none leading-relaxed">${escapeHtml(item.name)}</p>
+                        <p class="font-bold text-[var(--dark-purple)] pointer-events-none text-base mb-1">${escapeHtml(item.id)}</p>
+                        <p class="text-[var(--purple)] opacity-90 pointer-events-none leading-relaxed text-sm">${escapeHtml(item.name)}</p>
                     `;
                     fragment.appendChild(element);
                 });
@@ -412,43 +416,43 @@
                 const context = item.context || "No additional context is available for this interface.";
                 
                 detailsContent.innerHTML = `
-                    <div class="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-6 mb-8">
+                    <div class="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-4 mb-6">
                         <div class="flex-1">
-                            <h2 class="text-4xl lg:text-5xl font-bold text-[var(--dark-purple)] mb-4 leading-tight" tabindex="-1">${escapeHtml(item.name)}</h2>
-                            <p class="text-xl text-[var(--purple)] opacity-90 font-medium">${escapeHtml(item.id)}</p>
+                            <h2 class="text-3xl lg:text-4xl font-bold text-[var(--dark-purple)] mb-2 leading-tight" tabindex="-1">${escapeHtml(item.name)}</h2>
+                            <p class="text-lg text-[var(--purple)] opacity-90 font-medium">${escapeHtml(item.id)}</p>
                         </div>
-                        <span class="text-sm font-semibold px-6 py-3 rounded-2xl ${typeInfo[item.supplier_type].classes} whitespace-nowrap">${typeInfo[item.supplier_type].label}</span>
+                        <span class="text-xs font-semibold px-4 py-2 rounded-xl ${typeInfo[item.supplier_type].classes} whitespace-nowrap">${typeInfo[item.supplier_type].label}</span>
                     </div>
                     
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-10">
-                        <div class="bg-gradient-to-br from-[var(--birch)] to-[var(--white)] p-8 rounded-3xl shadow-xl border border-gray-100">
-                            <h4 class="font-bold text-[var(--eon-red)] text-sm mb-3 uppercase tracking-wider flex items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+                        <div class="bg-gradient-to-br from-[var(--birch)] to-[var(--white)] p-6 rounded-2xl shadow-xl border border-gray-100">
+                            <h4 class="font-bold text-[var(--eon-red)] text-xs mb-2 uppercase tracking-wider flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
                                 </svg>
                                 FROM
                             </h4>
-                            <p class="font-semibold text-[var(--dark-purple)] text-lg leading-relaxed">${escapeHtml(item.sender) || 'N/A'}</p>
+                            <p class="font-semibold text-[var(--dark-purple)] text-base leading-relaxed">${escapeHtml(item.sender) || 'N/A'}</p>
                         </div>
-                        <div class="bg-gradient-to-br from-[var(--birch)] to-[var(--white)] p-8 rounded-3xl shadow-xl border border-gray-100">
-                            <h4 class="font-bold text-[var(--eon-red)] text-sm mb-3 uppercase tracking-wider flex items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <div class="bg-gradient-to-br from-[var(--birch)] to-[var(--white)] p-6 rounded-2xl shadow-xl border border-gray-100">
+                            <h4 class="font-bold text-[var(--eon-red)] text-xs mb-2 uppercase tracking-wider flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
                                 </svg>
                                 TO
                             </h4>
-                            <p class="font-semibold text-[var(--dark-purple)] text-lg leading-relaxed">${escapeHtml(item.receiver) || 'N/A'}</p>
+                            <p class="font-semibold text-[var(--dark-purple)] text-base leading-relaxed">${escapeHtml(item.receiver) || 'N/A'}</p>
                         </div>
                     </div>
 
-                    <div class="bg-gradient-to-br from-[var(--white)] to-[var(--birch)] rounded-3xl p-8 shadow-xl border border-gray-100">
-                        <h3 class="text-2xl font-bold text-[var(--eon-red)] mb-6 flex items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <div class="bg-gradient-to-br from-[var(--white)] to-[var(--birch)] rounded-2xl p-6 shadow-xl border border-gray-100">
+                        <h3 class="text-xl font-bold text-[var(--eon-red)] mb-4 flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6-4h6m2 5.291A7.962 7.962 0 0112 15c-2.34 0-4.44-1.01-5.9-2.62l2.9-2.379a4 4 0 011.02.189M12 9a3 3 0 013 3m0 0a3 3 0 01-3 3m0-3h.01m9 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                             </svg>
                             Context & Purpose
                         </h3>
-                        <p class="text-[var(--dark-purple)] leading-relaxed text-lg">${escapeHtml(context)}</p>
+                        <p class="text-[var(--dark-purple)] leading-relaxed text-base">${escapeHtml(context)}</p>
                     </div>
                 `;
                 detailsContent.querySelector('h2').focus();
